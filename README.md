@@ -32,3 +32,5 @@ Cheese puffs, you're so amazingly yummy,
 Yes I wrote this just for you.
 Yes, you really belong in my tummy.
 Because you are delicious and new.
+
+Online source: [Cheese Puff Poem](https://sunschooling.blogspot.com/search?q=cheese)
