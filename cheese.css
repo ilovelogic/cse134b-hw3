@@ -1,4 +1,10 @@
 /*Netlify Site: https://cheeseloversanonymous.netlify.app/*/
+
+/* NoteL: <link rel="stylesheet"> is preferred over @import in production
+   because @import blocks parallel downloads. The browser must fetch and
+   parse this file before it even discovers the imported one, delaying
+   render. <link> tags are found by the HTML parser upfront and fetched
+   in parallel. */
 @import url("variables.css");
 
 /* Global reset */
@@ -39,7 +45,7 @@ section dt {
 }
 
 section dd {
-  border-left: 2px solid var(--color-light-border);
+  border-left: 2px solid var(--color-light);
     padding-left: 1rem;
 }
 
@@ -103,7 +109,7 @@ input[type="text"] {
 
 blockquote {
   padding: 1em;
-  background-color: var(--quote-color-background);
+  background-color: var(--color-light);
   border-left: 3px solid var(--color-accent);
 }
 
@@ -113,6 +119,7 @@ blockquote q {
 }
 
 footer {
+  max-width: var(--content-width);
   font-size: 0.8rem;
   text-align: left;
   padding: 1em;
