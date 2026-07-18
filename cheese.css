@@ -80,6 +80,7 @@ dt + dd {
 /* Class selector, from Part 1's Latin-term spans */
 .latin-term {
   font-style: italic;
+  font-weight: bold;
 }
 
 /* Attribute selectors */
