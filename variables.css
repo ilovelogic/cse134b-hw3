@@ -1,0 +1,11 @@
+/* variables.css
+   Holds the :root custom properties, pulled into cheese.css via @import. */
+:root {
+  --color-primary: #4b2e1e;
+  --color-accent: #b5651d;
+  --color-light-border: #fcce73;
+  --quote-color-background: #fdf6b9;
+  --warn-color-background: #ffe099;
+  --font-stack: Georgia, 'Times New Roman', serif;
+  --content-width: 70%;
+}

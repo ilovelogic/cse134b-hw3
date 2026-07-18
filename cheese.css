@@ -1,0 +1,134 @@
+@import url("variables.css");
+
+/* Global reset */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Inherited typography, set once on body, everything below inherits it */
+body {
+  font-family: var(--font-stack);
+  color: var(--color-primary);
+  line-height: 1.5;
+}
+
+main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section dt {
+  color: var(--color-accent);
+}
+
+section dd {
+  border-left: 2px solid var(--color-light-border);
+    padding-left: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Generated content */
+h2::before {
+  content: "🧀 ";
+}
+
+header h1{
+    color: var(--color-primary);
+}
+
+/* Descendant combinator: only <p> anywhere inside <header> */
+header p {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* Child combinator: only <p> that are direct children of <article> */
+article > p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+/* Adjacent sibling combinator: a <dd> immediately following a <dt> */
+dt + dd {
+  margin-bottom: 0.75em;
+}
+
+/* Class selector, from Part 1's Latin-term spans */
+.latin-term {
+  font-style: italic;
+}
+
+/* Attribute selectors */
+[lang] {
+  font-style: italic;
+}
+
+input[type="text"] {
+  border: 1px solid var(--color-primary);
+  padding: 0.5em;
+}
+
+/* ID selector, targets the warning paragraph from Part 1 */
+#warning-paragraph {
+  color: var(--color-accent);
+  background-color: var(--warn-color-background);
+  border: 1px solid var(--color-accent);
+  padding: 1em;
+}
+
+blockquote {
+  padding: 1em;
+  background-color: var(--quote-color-background);
+  border-left: 3px solid var(--color-accent);
+}
+
+blockquote q {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+footer {
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 1em;
+}
+
+/* State pseudo-classes */
+a:hover {
+  text-decoration: none;
+}
+
+a:focus,
+input:focus,
+button:focus {
+  outline: 2px solid var(--color-accent);
+}
+
+/* :checked combined with the adjacent sibling combinator */
+input:checked + label {
+  font-weight: bold;
+  color: var(--color-accent);
+}

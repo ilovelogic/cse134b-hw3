@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>A Short Guide to Cheese</title>
+        <link rel="stylesheet" href="cheese.css">
+        <style>
+            /* This rule and the #warning-paragraph rule in
+               cheese.css are both a single ID selector, so specificity is
+               tied. Whichever rule appears last wins.
+               This <style> block is parsed after the linked
+               cheese.css, so it wins out. */
+            #warning-paragraph {
+                color: darkred;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <header>
+                    <h1>A Short Guide to Cheese</h1>
+                    <p>by The CSE Cheese Society. Last updated <time datetime="2026-01">January 2026</time>.</p>
+                </header>
+
+                <p>
+                Cheese is one of humanity's oldest prepared foods. People have made it
+                for at least 7,000 years, long before written history. At its core,
+                cheese is simple: milk, salt, cultures, and rennet. Time and technique
+                do the rest.
+                </p>
+
+                <section>
+                <h2>What Is Cheese, Really?</h2>
+
+                <p>
+                Cheese begins when milk separates into curds and whey. The curds are
+                pressed, salted, and aged. Every variable matters: the animal, the
+                season, the cave, the patience of the maker. Change one and you get a
+                different cheese. This is why a single recipe has produced thousands
+                of distinct varieties.
+                </p>
+
+                <p>
+                The word "cheese" comes from the Latin <span class="latin-term" lang="la">caseus</span>, which also gives us the
+                word "casein," the main milk protein.
+                </p>
+                </section>
+
+                <section>
+                <h2>Famous Families of Cheese</h2>
+
+                <dl>
+                <dt>Fresh</dt>
+                <dd>Young and mild; mozzarella, ricotta, and chevre. Eat these within days.</dd>
+
+                <dt>Soft-ripened</dt>
+                <dd>These grow a white bloomy rind. Brie and Camembert are
+                the classic examples. The rind is edible and you should eat it.</dd>
+
+                <dt>Blue cheeses</dt>
+                <dd>Veined with <span class="latin-term" lang="la">Penicillium roqueforti</span>. Roquefort,
+                Gorgonzola, and Stilton lead this family. They are salty, sharp, and
+                divisive.</dd>
+
+                <dt>Hard cheeses</dt>
+                <dd>Aged for months or years. Parmigiano-Reggiano,
+                aged Gouda, and Comte reward the wait with crystals of crunch and
+                deep, nutty flavor.</dd>
+                </dl>
+                </section>
+
+                <section>
+                <h2>A Word of Caution</h2>
+
+                <p id="warning-paragraph">Warning: The American product known as "processed cheese food" is,
+                at best, distantly related to cheese. Read the label.</p>
+
+                <blockquote>
+                <q>Cheese is milk's leap toward immortality.</q>
+                    <footer>
+                    &mdash; attributed to Clifton Fadiman
+                    </footer>
+                </blockquote>
+                </section>
+
+                <section>
+                <h2>Try It Yourself</h2>
+
+                <form action="/submit-cheeses-tasted" method="POST">
+                    <fieldset>
+                    <legend>Which of these have you tasted?</legend>
+                    <ul>
+                        <li><input type="checkbox" id="tasted-brie" name="tasted_cheeses" value="brie"><label for="tasted-brie">Brie</label></li>
+                        <li><input type="checkbox" id="tasted-roquefort" name="tasted_cheeses" value="roquefort"><label for="tasted-roquefort">Roquefort</label></li>
+                        <li><input type="checkbox" id="tasted-aged-gouda" name="tasted_cheeses" value="aged-gouda"><label for="tasted-aged-gouda">Aged Gouda</label></li>
+                    </ul>
+                    <button type="submit">Submit tasted cheeses</button>
+                    </fieldset>
+                </form>
+
+                <form action="/submit-favorite-cheese" method="POST">
+                    <label for="favorite-cheese">Tell us your favorite cheese:</label>
+                    <input type="text" id="favorite-cheese" name="favorite_cheese">
+                    <button type="submit">Add it to the guide.</button>
+                </form>
+                </section>
+            </article>
+        </main>
+
+        <footer>Copyright 2026 The CSE Cheese Society. Cheese responsibly.</footer>
+    </body>
+</html>
