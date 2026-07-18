@@ -1,0 +1,2 @@
+# Redirection needed since netlify by default looks for index.html for its root html doc
+/   /cheese.html
